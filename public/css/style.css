@@ -35,3 +35,6 @@ body {
     position: absolute;
     right: 2px;
     cursor: pointer}
+.notes {
+    margin: 5px 5px 5px 5px;
+}
