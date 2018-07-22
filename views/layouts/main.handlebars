@@ -15,6 +15,7 @@
 
   <!-- custom CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/loader.css" />
 
   <!-- font awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
@@ -22,33 +23,42 @@
 </head>
 
 <body>
-  {{{body}}}
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
-    id="eModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"></h5>
-          <h6 class="artitle"></h6>
-        </div>
-        <div class="modal-body">
-          <div id="dnotes">
-            <p class="text-warning"> No notes found on this article yet! Add some? </p>
+  <div class="main-container">
+    {{{body}}}
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
+      id="eModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <h6 class="artitle"></h6>
           </div>
-          <div id="notesection">
-          </div>
-          <form>
-            <div class="form-group">
-              <label for="message-text" class="col-form-label">Add Note:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+          <div class="modal-body">
+            <div id="dnotes">
+              <p class="text-warning"> No notes found on this article yet! Add some? </p>
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="addnote">Add Notes</button>
+            <div id="notesection">
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Add Note:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="addnote">Add Notes</button>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="loader" style="display:none">
+    <div class="ball-scale-multiple">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 

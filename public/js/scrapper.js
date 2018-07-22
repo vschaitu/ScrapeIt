@@ -7,6 +7,8 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        $('.main-container').addClass("blur");
+        $('.loader').css("display", "block");
         // route to scrape express route
         window.location.href = "/scrape";
 
@@ -98,7 +100,7 @@ function loadModal(docid) {
 
                 $("#message-text").val('');
                 $('.modal-title').html('');
-                let description = "Notes for: " + data.title.split(' ').slice(0, 3).join(' ') + '...';
+                let description = "Notes for: " + data.title.split(' ').slice(0, 4).join(' ') + '...';
                 $('.modal-title').html(description);
 
                 $('#notesection').empty();

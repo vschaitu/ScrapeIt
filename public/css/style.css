@@ -1,5 +1,6 @@
 body {
-    background-color:  rgba(244, 102, 49,0.9);
+    /* background-color:  rgba(244, 102, 49,0.9); */
+    background-color: #ed5565;
     width: 80%;
     margin: auto;
 }
@@ -14,7 +15,7 @@ body {
 }
 
 .title {
-    color: bisque;
+    color:rgb(255, 224, 224);
     align-self: center;
     text-align: center;
 }
@@ -37,4 +38,12 @@ body {
     cursor: pointer}
 .notes {
     margin: 5px 5px 5px 5px;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
 }

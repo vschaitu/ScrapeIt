@@ -17,6 +17,7 @@ var db = require("./../models");
 router.get("/", function (req, res) {
     // Find all Article
     db.Article.find({})
+        .sort({_id:-1})
         .then(function (data) {
             // After finding all Articles, render the page and send
             var isDataPresent;
