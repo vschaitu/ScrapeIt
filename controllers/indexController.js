@@ -41,7 +41,7 @@ router.get("/", function (req, res) {
 });
 
 
-// A GET route for scraping the echoJS website 
+// A GET route for scraping the website 
 router.get("/scrape", function (req, res) {
     // First, we grab the body of the html with request
     axios.get("https://www.indiatimes.com/entertainment/")
@@ -79,6 +79,21 @@ router.get("/scrape", function (req, res) {
 
             // If we were able to successfully load redirect to home page
             res.redirect('/');
+        });
+});
+
+// Delete document
+router.delete("/api/delete/article/:id", function (req, res) {
+    // Find all users
+    db.Article.findByIdAndRemove({"_id": req.params.id})
+        .then(function (data) {
+            // If able to successfully delete send them back to the client
+            res.json(data);
+            console.log(data);
+        })
+        .catch(function (err) {
+            // If an error occurs, send it back to the client
+            res.json(err);
         });
 });
 

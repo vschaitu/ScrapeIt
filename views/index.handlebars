@@ -4,11 +4,11 @@
     <img class="burgerpng" src="./img/scrapeIt.png" alt="burger-image">
   </div>
   <div class="row mx-auto justify-content-center">
-    <h3 class="w-100 text-center title">Lets scrap Indiatimes Entertainment!!!</h3>
+    <h3 class="w-100 text-center title">Lets scrape IndiaTimes Entertainment!!!</h3>
     <button type="submit" class="btn btn-info mt-2" id="scrape">Scrape New Articles</button>
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid bodyp">
 
   <div class="mb-4">
     <h1 class="mt-2 mb-2"> Saved Articles</h1>
@@ -17,21 +17,20 @@
     {{/unless}}
   </div>
 
-  <div class="card-group">
+  <div class="card-group cardp">
 
     {{#if isDataPresent}} {{#each article}}
-    <div>
+    <div class="newcard" data-id={{this._id}}>
       <div class="card bg-dark text-white m-2">
         <img class="card-img" src="{{this.imgURL}}"
           alt="Card image">
         <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-          <!-- <h5 class="card-title">Card title</h5> -->
           <a href="{{this.link}}" target="_blank"
             class="card-text align-bottom text-white">{{this.title}}</a>
           <p class="card-text text-warning">{{this.shares}}</p>
           <a>
-            <button type="submit" class="btn btn-info" id="submit">Notes</button>
-            <button type="submit" class="btn btn-danger" id="submit">Delete</button>
+            <button type="submit" class="btn btn-info notes" >Notes</button>
+            <button type="submit" class="btn btn-danger delete" >Delete</button>
           </a>
         </div>
       </div>
